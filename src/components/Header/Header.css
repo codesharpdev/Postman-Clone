@@ -1,0 +1,80 @@
+.header {
+  background-color: #262626;
+  height: 60px;
+}
+.header__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 60px;
+  padding: 10px;
+}
+.header__newButton {
+  background-color: #f76a3f;
+  padding: 10px;
+  padding-left: 15px;
+  border-radius: 5px;
+  padding-right: 15px;
+  color: #fff;
+  border: none;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.header__button {
+  background-color: #363636;
+  color: #b3b3b3;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 15px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.header__titleWrapper {
+  padding-top: 5px;
+  margin-left: 110px;
+}
+#header__titleIcon {
+  color: #fff;
+  font-size: 18px;
+}
+.header_titleDropDownIcon {
+  color: #d4d4d4;
+  margin-left: 12px;
+}
+.header__titleText {
+  color: #d4d4d4;
+  font-size: 16px;
+  margin-left: 15px;
+}
+#header__inviteButton {
+  padding-top: 7px;
+  padding-bottom: 7px;
+  margin-left: 15px;
+}
+.header__iconWrapper {
+  padding-top: 6px;
+  padding-left: 110px;
+  display: inline-block;
+}
+/* .header__iconWrapper .active{
+    background-color: #0080e8;
+    color:#fff;
+    padding:10px;
+    border-radius: 50%;   
+} */
+/* .header__iconWrapper .active .header__iconButton{
+    font-size: 15px;
+} */
+.header__iconButton {
+  color: #b3b3b3;
+  cursor: pointer;
+  margin-right: 20px;
+  font-size: 18px;
+}
+#header__upgradeButton {
+  padding-left: 8px;
+  font-size: 12px;
+  padding-right: 8px;
+}

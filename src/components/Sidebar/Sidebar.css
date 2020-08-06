@@ -1,0 +1,89 @@
+.sidebar {
+  background-color: #fff;
+  border-right: 2px solid #efefef;
+  height: 100%;
+  width: 300px;
+  position: fixed;
+  z-index: 1;
+  top: 1;
+  left: 0;
+  overflow-x: hidden;
+  padding: 5px;
+}
+.sidebar__searchBarWrapper {
+  margin-top: 5px;
+}
+.sidebar__searchBar {
+  background-color: #fafafa;
+  border: 1px solid #e6e6e6;
+  padding: 8px;
+  border-radius: 20px;
+  font-size: 15px;
+  width: 91%;
+  padding-left: 20px;
+}
+.sidebar__menu {
+  margin-top: 15px;
+}
+.sidebar__menuOptions {
+  padding-right: 20px;
+  padding-bottom: 8px;
+  text-decoration: none;
+  color: #6b6b6b;
+  font-weight: 300;
+  padding-left: 20px;
+  font-size: 15px;
+  cursor: pointer;
+}
+.sidebar__menuOptions.active {
+  color: #292222;
+  border-bottom: 3px solid #f76a3f;
+}
+.sidebar__row {
+  margin-top: 23px;
+  margin-left: 23px;
+}
+.sidebar__newCollectionLink {
+  color: #f76a3f;
+  font-size: 13px;
+  cursor: pointer;
+}
+.sidebar__trashLink {
+  color: #6b6b6b;
+  font-size: 13px;
+  float: right;
+  margin-right: 15px;
+  cursor: pointer;
+}
+.sidebar__collectionList {
+  margin-top: 20px;
+}
+.sidebar__icons {
+  color: #808080;
+  margin-right: 10px;
+}
+.sidebar__collection:first-child {
+  border-top: 1px solid #e6e6e6;
+}
+.sidebar__collection {
+  border-bottom: 1px solid #e6e6e6;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 8px;
+  cursor: pointer;
+}
+.sidebar__collectionRow {
+  display: grid;
+  grid-template-columns: 17% 83%;
+}
+.sidebar__collectionColumn {
+  color: #6b6b6b;
+  font-size: 15px;
+  font-weight: 350;
+}
+.sidebar__collectionRequests {
+  margin-top: 5px;
+  font-size: 12px;
+  font-weight: 300;
+}
