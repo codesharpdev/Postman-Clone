@@ -1,14 +1,7 @@
 import React, { useState } from "react";
 
 import "./Content.css";
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faEye,
-  faCog,
-  faTimes,
-  faPlus,
-} from "@fortawesome/free-solid-svg-icons";
+import TabsBar from "./components/TabsBar";
 
 const Content = () => {
   const [tabs, setTabs] = useState([
@@ -16,11 +9,17 @@ const Content = () => {
   ]);
   const [tabIndex, setTabIndex] = useState(0);
 
+  //   Change the current tab
   const handleTabChange = (index) => {
     setTabIndex(index);
   };
 
+  //  Adds a new request tab
   const addNewTab = () => {
+    if (tabs.length >= 3) {
+      alert("Close the previous tabs.. ! We will implement more tabs soon..");
+      return;
+    }
     setTabs([
       ...tabs,
       { name: "Untitled Request", type: "GET", _id: Math.random(0, 10) * 10 },
@@ -28,62 +27,23 @@ const Content = () => {
     setTabIndex(tabs.length);
   };
 
+  //  Removes a request tab
   const removeTab = (tabToRemove) => {
     var tempTabs = tabs.filter((tab) => {
       return tab._id !== tabToRemove._id;
     });
     setTabs(tempTabs);
   };
+
   return (
     <div className="content">
-      <div className="content__tabBar">
-        <div className="content__tabBarRow">
-          <div className="content__tabBarColumn" id="content__tabBarTabs">
-            <div className="content__tabsRow">
-              {/* Tabs */}
-              {tabs.map((tab, index) => {
-                return (
-                  <div
-                    key={index}
-                    onClick={() => {
-                      handleTabChange(index);
-                    }}
-                    className={
-                      index === tabIndex
-                        ? "content__requestTab active"
-                        : "content__requestTab "
-                    }
-                  >
-                    <span className="content__requestType">{tab.type}</span>
-                    {tab.name}
-                    <FontAwesomeIcon
-                      icon={faTimes}
-                      onClick={() => removeTab(tab)}
-                      className="content__requestTabCloseIcon"
-                    />
-                  </div>
-                );
-              })}
-              <div
-                className="content__requestTab"
-                id="content__requestTabAddTab"
-                onClick={addNewTab}
-              >
-                <FontAwesomeIcon icon={faPlus} />
-              </div>
-            </div>
-          </div>
-          <div className="content__tabBarColumn content__tabBarOptionsWrapper">
-            <input value="DEV" className="content__tabBarSelect" />
-            <button className="content__button">
-              <FontAwesomeIcon icon={faEye} />
-            </button>
-            <button className="content__button">
-              <FontAwesomeIcon icon={faCog} />
-            </button>
-          </div>
-        </div>
-      </div>
+      <TabsBar
+        tabs={tabs}
+        tabIndex={tabIndex}
+        handleTabChange={handleTabChange}
+        handleNewTab={addNewTab}
+        handleRemoveTab={removeTab}
+      />
     </div>
   );
 };

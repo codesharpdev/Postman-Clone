@@ -1,16 +1,16 @@
 .header {
   background-color: #262626;
-  height: 60px;
+  height: 55px;
 }
 .header__row {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  height: 60px;
+  height: 55px;
   padding: 10px;
 }
 .header__newButton {
   background-color: #f76a3f;
-  padding: 10px;
+  padding: 8px;
   padding-left: 15px;
   border-radius: 5px;
   padding-right: 15px;
@@ -23,7 +23,7 @@
   background-color: #363636;
   color: #b3b3b3;
   border: none;
-  padding: 10px;
+  padding: 8px;
   border-radius: 5px;
   padding-left: 15px;
   padding-right: 15px;
