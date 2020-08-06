@@ -30,6 +30,31 @@ const RequestInput = (props) => {
             <FontAwesomeIcon icon={faCaretDown} />
           </div>
         </div>
+        {/* Input */}
+
+        <div className="content__requestInputRow">
+          <div className="content__requestInputColumn">
+            <select>
+              <option>GET</option>
+              <option>POST</option>
+            </select>
+            <input type="text" placeholder="" />
+            <button className="content__requestSendButton">
+              Send
+              <FontAwesomeIcon
+                icon={faCaretDown}
+                className="content__requestSendButtonIcon"
+              />
+            </button>
+            <button className="content__requestSaveButton ">
+              Save
+              <FontAwesomeIcon
+                icon={faCaretDown}
+                className="content__requestSendButtonIcon"
+              />
+            </button>
+          </div>
+        </div>
       </div>
     );
   } else {

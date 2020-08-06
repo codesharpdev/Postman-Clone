@@ -102,3 +102,54 @@
   margin-right: 20px;
   color: #6e6e6e;
 }
+.content__requestInputFieldWrapper {
+  display: inline-block;
+  padding: 10px;
+}
+.content__requestInputRow {
+  margin: 10px;
+}
+.content__requestInputRow select {
+  background-color: #ececec;
+  border: 1px solid #d4d4d4;
+  padding: 10px;
+  padding-right: 50px;
+}
+.content__requestInputRow input {
+  color: #5e5e5e;
+  border-radius: 0px;
+  border: 1px solid #d4d4d4;
+  background-color: #ececec;
+  padding: 11px;
+  width: 60%;
+  border-left: none;
+}
+.content__requestInputRow {
+  display: grid;
+  grid-template-columns: 100%;
+}
+.content__requestSendButton {
+  background-color: #0080e8;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  margin-left: 10px;
+  border-radius: 5px;
+  padding-left: 20px;
+  padding-right: 30px;
+  cursor: pointer;
+}
+.content__requestSaveButton {
+  background-color: #e6e6e6;
+  color: #555555;
+  border: none;
+  padding: 12px;
+  margin-left: 10px;
+  border-radius: 5px;
+  padding-left: 20px;
+  padding-right: 30px;
+  cursor: pointer;
+}
+.content__requestSendButtonIcon {
+  margin-left: 10px;
+}
