@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import "./Content.css";
 import TabsBar from "./components/TabsBar";
+import RequestInput from "./components/RequestInput";
 
 const Content = () => {
   const [tabs, setTabs] = useState([
@@ -37,6 +38,7 @@ const Content = () => {
 
   return (
     <div className="content">
+      {/* Tabs Bar */}
       <TabsBar
         tabs={tabs}
         tabIndex={tabIndex}
@@ -44,6 +46,8 @@ const Content = () => {
         handleNewTab={addNewTab}
         handleRemoveTab={removeTab}
       />
+      {/* Request Input */}
+      <RequestInput tab={tabs[tabIndex]} />
     </div>
   );
 };

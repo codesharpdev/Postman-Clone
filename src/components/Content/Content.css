@@ -78,3 +78,27 @@
   width: 3%;
   padding-left: 10px;
 }
+
+.content__requestDetailsRow {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  color: #666666;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e6e6e6;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 10px;
+}
+.content__requestDetailsName {
+  font-size: 13px;
+  font-weight: 400;
+  margin-left: 10px;
+}
+.content__requestBadge {
+  background-color: #e6e6e6;
+  padding: 4px;
+  margin-left: 5px;
+  border-radius: 2px;
+  margin-right: 20px;
+  color: #6e6e6e;
+}
