@@ -1,8 +1,10 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGlobe, faCaretDown } from "@fortawesome/free-solid-svg-icons";
+import ReactJson from "react-json-view";
 
-const Response = () => {
+const Response = (props) => {
+  const { tab } = props;
   return (
     <div className="content__responseContainer">
       <div className="content__responeMenu">
@@ -32,6 +34,10 @@ const Response = () => {
             </span>
           </div>
         </div>
+      </div>
+      <br />
+      <div className="content__JSONViewer">
+        <ReactJson src={tab.response.data} />
       </div>
     </div>
   );

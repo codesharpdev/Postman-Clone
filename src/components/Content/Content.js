@@ -6,10 +6,17 @@ import RequestInput from "./components/RequestInput";
 import RequestOptionsMenu from "./components/RequestOptionsMenu";
 import RequestOptions from "./components/RequestOptions";
 import Response from "./components/Response";
+import { sendRequest } from "../../actions/actions";
 
 const Content = () => {
   const [tabs, setTabs] = useState([
-    { name: "Get Sentiment Levels", type: "GET", _id: Math.random(0, 10) * 10 },
+    {
+      name: "Get Sentiment Levels",
+      type: "GET",
+      _id: Math.random(0, 10) * 10,
+      URL: "",
+      response: "hello",
+    },
   ]);
   const [requestTabs] = useState([
     "Params",
@@ -22,6 +29,7 @@ const Content = () => {
   ]);
   const [tabIndex, setTabIndex] = useState(0);
   const [requestsTabIndex, setRequestsTabIndex] = useState(0);
+  const [URL, setURL] = useState("");
 
   //   Change the current tab
   const handleTabChange = (index) => {
@@ -40,7 +48,13 @@ const Content = () => {
     }
     setTabs([
       ...tabs,
-      { name: "Untitled Request", type: "GET", _id: Math.random(0, 10) * 10 },
+      {
+        name: "Untitled Request",
+        type: "GET",
+        _id: Math.random(0, 10) * 10,
+        URL: "",
+        response: "google",
+      },
     ]);
     setTabIndex(tabs.length);
   };
@@ -51,6 +65,29 @@ const Content = () => {
       return tab._id !== tabToRemove._id;
     });
     setTabs(tempTabs);
+  };
+
+  const handleURLChange = (e) => {
+    const tempTabs = tabs;
+    tempTabs[tabIndex].URL = e.target.value;
+    setTabs(tempTabs);
+  };
+
+  const handleSubmit = () => {
+    sendRequest("GET", tabs[tabIndex].URL, {}, {})
+      .then((res) => {
+        if (res.status === 200) {
+          const tempTabs = tabs;
+          tempTabs[tabIndex].response = res.data;
+          setTabs(tempTabs);
+          console.log(tabs[tabIndex]);
+        }
+      })
+      .catch((err) => {
+        const tempTabs = tabs;
+        tempTabs[tabIndex].response = err;
+        setTabs(tempTabs);
+      });
   };
 
   return (
@@ -64,7 +101,11 @@ const Content = () => {
         handleRemoveTab={removeTab}
       />
       {/* Request Input */}
-      <RequestInput tab={tabs[tabIndex]} />
+      <RequestInput
+        tab={tabs[tabIndex]}
+        handleChange={handleURLChange}
+        handleSubmit={handleSubmit}
+      />
       {/* Request Options Menu */}
       <RequestOptionsMenu
         tabs={requestTabs}
@@ -72,7 +113,7 @@ const Content = () => {
         handleTabChange={(index) => handleRequestTabChange(index)}
       />
       <RequestOptions tabIndex={requestsTabIndex} />
-      <Response />
+      <Response tab={tabs[tabIndex]} />
     </div>
   );
 };

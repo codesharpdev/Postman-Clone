@@ -7,7 +7,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 const RequestInput = (props) => {
-  const { tab } = props;
+  const { tab, handleChange, handleSubmit } = props;
   if (tab !== undefined) {
     return (
       <div className="content__requestInputWrapper">
@@ -37,8 +37,11 @@ const RequestInput = (props) => {
               <option>GET</option>
               <option>POST</option>
             </select>
-            <input type="text" placeholder="" />
-            <button className="content__requestSendButton">
+            <input type="text" placeholder="" onChange={handleChange} />
+            <button
+              className="content__requestSendButton"
+              onClick={handleSubmit}
+            >
               Send
               <FontAwesomeIcon
                 icon={faCaretDown}
