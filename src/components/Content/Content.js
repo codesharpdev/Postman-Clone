@@ -5,6 +5,7 @@ import TabsBar from "./components/TabsBar";
 import RequestInput from "./components/RequestInput";
 import RequestOptionsMenu from "./components/RequestOptionsMenu";
 import RequestOptions from "./components/RequestOptions";
+import Response from "./components/Response";
 
 const Content = () => {
   const [tabs, setTabs] = useState([
@@ -71,6 +72,7 @@ const Content = () => {
         handleTabChange={(index) => handleRequestTabChange(index)}
       />
       <RequestOptions tabIndex={requestsTabIndex} />
+      <Response />
     </div>
   );
 };
