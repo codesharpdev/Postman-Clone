@@ -3,16 +3,32 @@ import React, { useState } from "react";
 import "./Content.css";
 import TabsBar from "./components/TabsBar";
 import RequestInput from "./components/RequestInput";
+import RequestOptionsMenu from "./components/RequestOptionsMenu";
+import RequestOptions from "./components/RequestOptions";
 
 const Content = () => {
   const [tabs, setTabs] = useState([
     { name: "Get Sentiment Levels", type: "GET", _id: Math.random(0, 10) * 10 },
   ]);
+  const [requestTabs] = useState([
+    "Params",
+    "Authorization",
+    "Headers",
+    "Body",
+    "Pre-request Script",
+    "Tests",
+    "Settings",
+  ]);
   const [tabIndex, setTabIndex] = useState(0);
+  const [requestsTabIndex, setRequestsTabIndex] = useState(0);
 
   //   Change the current tab
   const handleTabChange = (index) => {
     setTabIndex(index);
+  };
+
+  const handleRequestTabChange = (index) => {
+    setRequestsTabIndex(index);
   };
 
   //  Adds a new request tab
@@ -48,6 +64,13 @@ const Content = () => {
       />
       {/* Request Input */}
       <RequestInput tab={tabs[tabIndex]} />
+      {/* Request Options Menu */}
+      <RequestOptionsMenu
+        tabs={requestTabs}
+        tabIndex={requestsTabIndex}
+        handleTabChange={(index) => handleRequestTabChange(index)}
+      />
+      <RequestOptions tabIndex={requestsTabIndex} />
     </div>
   );
 };

@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCaretRight,
   faComment,
-  faChevronDown,
   faCaretDown,
 } from "@fortawesome/free-solid-svg-icons";
 
