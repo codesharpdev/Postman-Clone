@@ -14,7 +14,7 @@ const Content = () => {
       name: "Get Sentiment Levels",
       type: "GET",
       _id: Math.random(0, 10) * 10,
-      URL: "",
+      URL: "dummy.restapiexample.com/api/v1/employees",
       response: "hello",
     },
   ]);
@@ -29,7 +29,6 @@ const Content = () => {
   ]);
   const [tabIndex, setTabIndex] = useState(0);
   const [requestsTabIndex, setRequestsTabIndex] = useState(0);
-  const [URL, setURL] = useState("");
 
   //   Change the current tab
   const handleTabChange = (index) => {
@@ -53,7 +52,7 @@ const Content = () => {
         type: "GET",
         _id: Math.random(0, 10) * 10,
         URL: "",
-        response: "google",
+        response: {},
       },
     ]);
     setTabIndex(tabs.length);
@@ -80,13 +79,16 @@ const Content = () => {
           const tempTabs = tabs;
           tempTabs[tabIndex].response = res.data;
           setTabs(tempTabs);
-          console.log(tabs[tabIndex]);
+          addNewTab();
+          setTabIndex(tabs.length - 1);
         }
       })
       .catch((err) => {
         const tempTabs = tabs;
         tempTabs[tabIndex].response = err;
         setTabs(tempTabs);
+        addNewTab();
+        setTabIndex(tabs.length - 1);
       });
   };
 
