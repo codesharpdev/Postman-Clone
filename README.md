@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href="https://i.ibb.co/7VYTD1z/68747470733a2f2f6173736574732e676574706f73746d616e2e636f6d2f636f6d6d6f6e2d73686172652f706f73746d616e.png" alt="Postman Clone" width="200"></a>
+  <a href="" alt="Postman Clone" width="200"></a>
   <br>
   Postman Clone
   <br>
