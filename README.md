@@ -1,33 +1,28 @@
-# Postman Clone
+<h1 align="center">
+  <br>
+  <a href="https://camo.githubusercontent.com/b3c9dfadc6df3463d2e83bb7a5ab8fecbe57897c/68747470733a2f2f6173736574732e676574706f73746d616e2e636f6d2f636f6d6d6f6e2d73686172652f706f73746d616e2d6769746875622d6c6f676f2e706e67" alt="Postman Clone" width="200"></a>
+  <br>
+  Postman Clone
+  <br>
+</h1>
 
-This application is built using ReactJS and Electron
+## How To Use
 
-![Screenhsot](https://i.ibb.co/JnrgCSS/Screenshot-from-2020-08-07-16-32-23.png)
-
-## Installation
-
-Clone this repository
+To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
 
 ```bash
-git clone https://github.com/saranrajshri/Postman-Clone 
+# Clone this repository
+$ git clone https://github.com/amitmerchant1990/electron-markdownify
+
+# Go into the repository
+$ cd electron-markdownify
+
+# Install dependencies
+$ npm install
+
+# Run the app
+$ npm start
 ```
 
-Install node_modules
-
-```
-yarn install
-cd client
-yarn install
-```
-
-Start the client in the client folder 
-```bash
-yarn start
-```
-
-Now, go back to the root directory and start the electron app
-```bash
-cd ..
-yarn start
-```
+Note: If you're using Linux Bash for Windows, [see this guide](https://www.howtogeek.com/261575/how-to-run-graphical-linux-desktop-applications-from-windows-10s-bash-shell/) or use `node` from the command prompt.
 
