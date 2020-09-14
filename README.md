@@ -8,7 +8,9 @@
 
 <h4 align="center">A Duplicate version of Postman desktop app built on top of <a href="http://electron.atom.io" target="_blank">Electron</a> and <a href="http://reactjs.org" target="_blank">React</a>.</h4>
 
-<img src="https://i.ibb.co/FhtPHWC/ezgif-com-video-to-gif.gif" size="500"/>
+<div align="center">
+<img src="https://i.ibb.co/FhtPHWC/ezgif-com-video-to-gif.gif" />
+</div>
 
 <p align="center">
   <a href="#key-features">Key Features</a> •
