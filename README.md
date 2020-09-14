@@ -6,11 +6,10 @@
   <br>
 </h1>
 
-<h4 align="center">A Duplicate version of Postman desktop app built on top of <a href="http://electron.atom.io" target="_blank">Electron</a> and <a href="http://reactjs.org" target="_blank">React</a>.</h4>
+<h4 align="center">A Duplicate version of Postman desktop app built on top of <a href="http://electron.atom.io" target="_blank">Electron</a> and <a href="http://reactjs.org" target="_blank">React</a>. <a href="https://www.youtube.com/watch?v=P5VyAV4FIMA">Video Demo</a></h4>
 
 <div align="center">
 <img src="https://i.ibb.co/FhtPHWC/ezgif-com-video-to-gif.gif" />
-  <a href="https://www.youtube.com/watch?v=P5VyAV4FIMA">Video Demo</a>
 </div>
 
 <p align="center">
