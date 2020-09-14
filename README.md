@@ -49,7 +49,7 @@ Note: If you're using Linux Bash for Windows, [see this guide](https://www.howto
 
 ## Related
 
-[markdownify-web](https://github.com/amitmerchant1990/markdownify-web) - Web version of Markdownify
+[Postman-Clone-Web](https://github.com/saranrajshri/) - Web version of Markdownify
 
 
 ## License
