@@ -19,6 +19,15 @@
 </p>
 
 
+
+## Key Features
+
+* Work on multiple tabs - 
+* Make GET and POST Request
+* Send JSON in the body
+* View response of a request
+
+
 ## How To Use
 
 To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
