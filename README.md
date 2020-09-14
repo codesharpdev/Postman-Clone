@@ -13,7 +13,6 @@
   <a href="#key-features">Key Features</a> •
   <a href="#how-to-use">How To Use</a> •
   <a href="#download">Download</a> •
-  <a href="#credits">Credits</a> •
   <a href="#related">Related</a> •
   <a href="#license">License</a>
 </p>
@@ -22,7 +21,7 @@
 
 ## Key Features
 
-* Work on multiple tabs - 
+* Work on multiple tabs
 * Make GET and POST Request
 * Send JSON in the body
 * View response of a request
