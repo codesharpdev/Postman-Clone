@@ -6,6 +6,8 @@
   <br>
 </h1>
 
+<h4 align="center">A Duplicate version of Postman desktop app built on top of <a href="http://electron.atom.io" target="_blank">Electron</a> and <a href="http://reactjs.org" target="_blank">React</a>.</h4>
+
 ## How To Use
 
 To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
